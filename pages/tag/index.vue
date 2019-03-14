@@ -8,7 +8,7 @@
                 
                 <div class="tag-body-tags">
                    <div v-for="(item,index) in tags" :key="index"  class="tag-body-tags-li">
-                       <Tag v-for="(tag,index) in item" :key="index" :tname="tag" ></Tag>
+                       <Tag v-for="(tag,index) in item" :key="tag.id" :tname="tag.name" ></Tag>
                    </div> 
                 </div>
                <div class="tag-body-title">
@@ -19,6 +19,9 @@
     </div>
 </template>
 <script>
+    
+import axios from 'axios'
+
 import Tag from '~/components/tag.vue'
 import {$RandomSplit} from '@/utils/Random';
 import { $NormalSort } from '@/utils/ArrSort';
@@ -30,7 +33,7 @@ export default {
     data() {
         return {
             list:[],
-            tagList: ["BOM", "Babel", "MVC", "Mobx", "OSI", "React", "Redux", "Sass", "TCP/IP", "Web", "css", "dos命令", "element-ui", "git", "html,css,js", "html5", "http", "java", "js", "jsp", "koa", "mysql", "node", "ramda", "shell", "svg", "vue", "web", "web开发", "代码规范", "代码重构", "优秀项目", "函数式编程", "前端", "前端面试", "安全", "布局", "性能", "数据库", "数据结构和算法", "有趣的", "服务端", "浏览器", "移动端", "移动端,", "布局", "缓存", "设计模式", "读书笔记", "调试", "路由", "面向对象编程", "面试"],
+            tagList: [],
         }
     },
     computed:{
@@ -53,6 +56,11 @@ export default {
         }
     },
     created(){
+        let data  = axios.get('http://localhost:3000/api/tags')
+        data.then((b)=>{
+            this.tagList = b.data.tags;
+         })
+
     }
 }
 
@@ -72,6 +80,7 @@ export default {
             text-align: center;
             font-size: 22px;
             font-weight: 400;
+             user-select: none;
         }
 
         .tag-body {

@@ -18,29 +18,29 @@
                     </div>
                     <div class="person-link-item">
                         <a href="">
-                            <a href="">
+                           
                                 <Tooltip content="yongsheng_pang@163.com" placement="top">
                                     <Icon type="ios-mail" class="person-link-item-icon"/>
                                 </Tooltip>
-                            </a>
+                          
                         </a>
                     </div>
                     <div class="person-link-item">
                         <a href="">
-                            <a href="">
+                           
                                 <Tooltip content="codepen" placement="top">
                                     <Icon type="md-code-working" class="person-link-item-icon"/>
                                 </Tooltip>
-                            </a>
+                           
                         </a>
                     </div>
                     <div class="person-link-item">
                         <a href="">
-                            <a href="">
+                           
                                 <Tooltip content="微信：Pang_yongsheng" placement="top">
                                     <Icon type="md-male" class="person-link-item-icon"/>
                                 </Tooltip>
-                            </a>
+                           
                         </a>
                     </div>
                 </div>
@@ -56,12 +56,12 @@
                 <div class="person-state">
                     <div class="person-state-item">
                         <a href="">
-                            <span>54</span><span>日志</span>
+                            <span>日志-54</span>
                         </a>
                     </div>
                    <div class="person-state-item">
                         <a href="">
-                            <span>4</span><span>分类</span>
+                            <span>分类-6</span>
                         </a>
                     </div>
                 </div>
@@ -82,8 +82,7 @@
 <style lang="less" scoped>
     .sidebar{
        position: fixed;
-       top: 90px;
-       
+       top: 90px;    
     }
 	.person{ 
         width: 420px;
@@ -163,6 +162,15 @@
                 color: #fc6423;
             }
         }
-
+        &-state{
+            a{
+                font-size: 16px;
+                color:#000;
+                line-height: 30px;
+            }
+            a:hover{
+                color: green;
+            }
+        }
     }
 </style>

@@ -1,43 +1,78 @@
 <template>
-	<Timeline>
-        <TimelineItem>
-            <p class="time">1976年</p>
-            <p class="content"> 问世</p>
-        </TimelineItem>
-        <TimelineItem>
-            <p class="time">1984年</p>
-            <p class="content">发布 Macintosh</p>
-        </TimelineItem>
-        <TimelineItem>
-            <p class="time">2007年</p>
-            <p class="content">发布 Phone</p>
-        </TimelineItem>
-        <TimelineItem>
-            <p class="time">2010年</p>
-            <p class="content">发布 we</p>
-        </TimelineItem>
-        <TimelineItem>
-            <p class="time">2011年10月5日</p>
-            <p class="content">哈哈哈</p>
-        </TimelineItem>
-    </Timeline>
+    <div class="time">
+       <div class="time-wrap">
+            <div class="time-content">
+                
+                <p class="time-content-title">reat! 179 posts in total. Keep on posting.</p>
+                    
+                    <Timeline>
+                        <template v-for="(li,index) in list" >
+                            <TimelineItem v-if="li.des" :key="index">
+                                <p class="line-time">{{li.time}}</p>
+                                <p class="line-content"> {{li.des}}</p>
+                            </TimelineItem>
+                            <TimelineItem v-else :key="index">
+                                <p class="line-time-only">{{li.time}}</p>
+                            </TimelineItem>
+                        </template>  
+                    </Timeline>
+                     
+            </div>
+
+        </div>
+        <Foot/> 
+    </div>
+    
 </template>
-
 <script>
-
-
+import Foot from '~/components/foot.vue'
 export default {
-  components: {
-   
-  }
+    head() {
+        return {
+            title:'Home',
+            meta: [
+                { hid: 'description', name: 'description', content: 'My custom description' }
+            ]
+        }
+    },
+    components: {
+        Foot
+    },
+    data(){
+        return{
+            list:[
+                {time:"2018"},
+                {time:"12-25",des:"S常用设计模式总结"},
+                {time:"12-25",des:"如何形成一个完整的HTML对象"},
+                {time:"12-25",des:"聊聊伪元素（::after和::before）、pointer-events属性、touch-action属性"},
+                {time:"12-25",des:"HTTP知识（前端相关）"},
+                {time:"12-25",des:"HTTP知识（前端相关）"},
+                {time:"2018"},
+                {time:"12-25",des:"CSS技巧"},
+            ]
+        }
+    }
 }
 </script>
+<style lang="less" scoped>
+    .time{
+        display: flex;
+        flex-direction: column;
+        flex: auto;
+        background: #f5f7f9;
+        &-wrap{
+            width: 700px;
+            margin: 50px auto;
+            min-height: 800px;
+            
+       }
+       &-content{
 
-<style lang="less">
-   @import "../../assets/var.less";
-
-	.time{
-		color: @theme-color ;
-	}
-
+            
+       }
+       
+   
+    }
+    
+    
 </style>

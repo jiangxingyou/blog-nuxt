@@ -5,9 +5,9 @@
   "author": "pangyongsheng",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt --port 8088",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "start": "nuxt start --port 8088",
     "generate": "nuxt generate"
   },
   "dependencies": {
@@ -17,6 +17,8 @@
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "@gauseen/nuxt-proxy": "^1.0.1",
+    "@nuxtjs/proxy": "^1.3.3",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-prettier": "2.6.2",
     "less": "^3.9.0",

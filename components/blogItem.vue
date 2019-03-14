@@ -55,7 +55,7 @@
                 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             display: block;
             font-weight: 300;
-            font-size: 40px;
+            font-size: 36px;
             color: #35495e;
             letter-spacing: 1px;
             text-align: center;
@@ -96,7 +96,7 @@
         }
         &-abstract{
             text-align: justify;
-            font-size: 20px;
+            font-size: 22px;
         }
         &-read{
             background: #97dffd;
