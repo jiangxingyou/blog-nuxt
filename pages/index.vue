@@ -13,7 +13,6 @@
                 </Row>
             </Content>
          </Layout>
-        <Foot></Foot>
     </Layout>
 </template>
 <script>
@@ -21,7 +20,6 @@ import Logo from '~/components/Logo.vue'
 import Nav from '~/components/nav.vue'
 import Banner from '~/components/banner.vue'
 import Item from '~/components/blogItem.vue'
-import Foot from '~/components/foot.vue'
 import Person from '~/components/person.vue'
 export default {
     head() {
@@ -33,7 +31,7 @@ export default {
         }
     },
     components: {
-        Logo,Nav,Banner,Item,Foot,Person
+        Logo,Nav,Banner,Item,Person
     },
     data(){
         return{

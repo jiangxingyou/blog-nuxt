@@ -1,17 +1,15 @@
 <template>
-  <div>
-    <Layout>
-      <Header style="position: fixed;width: 100%;z-index: 100">
-
-      <Nav></Nav>
-      </Header>
-    </Layout>
-    <nuxt style="margin-top: 64px"/>
-  </div>
+    <div style="min-height: 100vh;margin: 0;padding:0;display: flex;
+      flex-direction: column;" >
+        <Header style="position: fixed;width: 100%;z-index: 100">
+            <Nav></Nav>
+        </Header>
+        <nuxt style="flex:1;padding-top: 64px;" />
+        <Foot/> 
+    </div>
 </template>
-
 <style>
-html {
+    html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
@@ -61,9 +59,11 @@ html {
 </style>
 <script type="text/javascript">
 import Nav from '~/components/nav.vue'
+import Foot from '~/components/foot.vue'
 export default {
-  components: {
-    Nav
-  }
+    components: {
+        Nav,Foot
+    }
 }
+
 </script>

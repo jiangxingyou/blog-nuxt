@@ -20,12 +20,12 @@
             </div>
 
         </div>
-        <Foot/> 
+        
     </div>
     
 </template>
 <script>
-import Foot from '~/components/foot.vue'
+
 export default {
     head() {
         return {
@@ -36,7 +36,7 @@ export default {
         }
     },
     components: {
-        Foot
+        
     },
     data(){
         return{

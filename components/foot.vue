@@ -24,14 +24,13 @@
 
 <style lang="less" scoped>
 	.foot{
-        margin-top: 40px;
         padding: 10px 0;
         background: #f5f5f5;
         color: #666;
         font-size: 14px;
         width: 100%;
-       
-        bottom: 0;
+        position: relative;
+        margin:0;
 
         &-content{
             margin: 0 auto;
