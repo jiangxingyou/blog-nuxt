@@ -1,35 +1,37 @@
 4<template>
     <div class="item">
         <div class="item-type">
-            日记本····     
+            {{bType}}····     
         </div>
         <div class="item-inner">
-            <div class="item-title">定制化默认的建一个</div>
+            <div class="item-title">{{bTitle}}</div>
             <div class="item-info">
                 <span class="item-info-time">
                     <Icon type="ios-clipboard-outline" />
-                    发表于20190101
+                    发表于{{bTime}}
                 </span>
-                <span class="item-info-word">
+                <!-- <span class="item-info-word">
                     <Icon type="ios-create-outline" />
                     字数300
-                </span>  
+                </span>  --> 
                 <span class="item-info-scan">
                     <Icon type="ios-eye-outline" />
-                    阅读200
+                    阅读{{bScan}}
                 </span>    
             </div>
-            <div class="item-abstract">一直是 ESLint 的忠实用户，深知规范的重要性。然而，在新项目交接中，我被 Git Commit 规范逼疯了。才意识到自己的疏忽，于是便有了一探究竟的想法。</div>
+            <div class="item-abstract">{{bAbstract}}</div>
         </div>
         <div class="item-read">阅读全文</div>
     </div>
 </template>
 <script>
     export default {
-        data () {
-            return {
-               
-            }
+        props:{
+           bType:String,    //类型
+           bTitle:String,   //标题
+           bTime:String,    //时间
+           bScan:Number,   //浏览数
+           bAbstract:String //内容概要
         }
     }
 </script>
