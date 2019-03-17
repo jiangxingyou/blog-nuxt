@@ -21,9 +21,6 @@
             </div>
             <div class="item-abstract">一直是 ESLint 的忠实用户，深知规范的重要性。然而，在新项目交接中，我被 Git Commit 规范逼疯了。才意识到自己的疏忽，于是便有了一探究竟的想法。</div>
         </div>
-        <div class="item-tag">
-            
-        </div>
         <div class="item-read">阅读全文</div>
     </div>
 </template>
@@ -40,13 +37,18 @@
     @import "../assets/var.less";
     .item{
         background-color: #fff;
-        box-shadow: 0px 0px 1px #ccc;
+        box-shadow: -1px 1px 1px #ccc;
         border-radius: 3px;
         width: 90%;
         margin:auto;
         margin-bottom: 20px;
         position: relative;
         padding: 40px 20px;
+
+        background: linear-gradient(-150deg, transparent 1.5em, #fff 0);    
+        position: relative;
+        border-radius: .5em;
+
         span{
             margin: auto 12px;
         }
@@ -88,7 +90,7 @@
             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px #f5f7f9, 0 1px 5px 0 rgba(0, 0, 0, 0.12);
             background-color: #f5f7f9;
             margin: 5px 0 15px 2px;
-            font-size: 14px;
+            font-size: 17px;
             border-radius: 0 4px 4px 0;
             display: inline-block;
             padding: 6px 9px 3px 17px;
@@ -101,18 +103,39 @@
         &-read{
             background: #97dffd;
             color: #fff;
-            font-size: 13px;
+            font-size: 17px;
             padding: 1px 15px;
             border-radius: 5px;
             border: none;
             display: inline-block;
-            transition-property: background-color;
-            transition-duration: .2s;
-            transition-timing-function: ease-in-out;
-            transition-delay: 0s;
-            line-height: 2;
             cursor: pointer;
-            
+            margin-top: 30px;
+            position: relative;
+            left: 80%;
+            width: 100px;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;  
+
+        }
+        &-read:hover{
+                font-weight:600;
+            }
+
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: linear-gradient(to left bottom, transparent 50%, rgb(151, 223, 253) 0, rgb(151, 223, 253)) 100% 0 no-repeat;
+            width: 1.73em;
+            height: 3em;
+            -webkit-transform: translateY(-1.3em) rotate(-30deg);
+            transform: translateY(-1.3em) rotate(-30deg);
+            -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+            border-bottom-left-radius: inherit;
+            box-shadow: -0.2em 0.2em 0.3em -0.1em rgba(0, 0, 0, 0.15);
         }
 
 

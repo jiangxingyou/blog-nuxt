@@ -3,10 +3,12 @@
        <div class="type-wrap">
             <div class="type-content">
                 <h3 class="type-content-title">分类</h3>
-                <p class="type-content-des">27 categories in total</p>
+                <p class="type-content-des">{{lists.length}} categories in total</p>
+                
                 <ul>
-                    <li>BOM</li>
+                    <li v-for="(li,index) in lists" :ley="index">{{li.name}}({{li.total}})</li>
                 </ul>
+
             </div>
 
         </div>
@@ -30,7 +32,12 @@ export default {
     },
     data(){
         return{
-            
+            lists:[
+                {name:"日记",total:'3'},
+                {name:"日记",total:'3'},
+                {name:"web",total:'13'},
+                {name:"node",total:'1'}
+            ]
         }
     }
 }
@@ -40,12 +47,20 @@ export default {
         display: flex;
         flex-direction: column;
         flex: auto;
-        background: #f5f7f9;
+        background: #e8edf1;
         &-wrap{
-            width: 700px;
+            width: 80%;
             margin: 50px auto;
-            min-height: 800px;
+            min-height: 600px;
             background-color: #fff;
+            background: #58a;
+            background: radial-gradient(circle at top left, transparent 15px, #fff 0) top left,
+                        radial-gradient(circle at top right, transparent 15px, #fff 0) top right,
+                        radial-gradient(circle at bottom left, transparent 15px, #fff 0) bottom left,
+                        radial-gradient(circle at bottom right, transparent 15px, #fff 0) bottom right;
+            background-size: 51% 51%; 
+            
+            background-repeat: no-repeat;
        }
        &-content{
 
@@ -55,8 +70,20 @@ export default {
                 margin: 60px auto;
                 text-align: center;
             }
+            &-des{
+                text-align: center;
+                margin:30px auto;
+                font-size: 18px;
+            }
+            ul{
+                padding:20px;
+                padding-left: 80px;
+                li{
+                    font-size: 23px;        
+                }
+            }
        }
     }
-   
+
     
 </style>

@@ -1,6 +1,6 @@
 <template>
-    <Layout>
-         <Layout>
+
+         <Layout class="blog">
             <Content class="content-wrap">
                 <!-- <Banner></Banner> -->
                  <Row   type="flex" justify="center" >
@@ -13,7 +13,6 @@
                 </Row>
             </Content>
          </Layout>
-    </Layout>
 </template>
 <script>
 import Logo from '~/components/Logo.vue'
@@ -42,6 +41,7 @@ export default {
 
 </script>
 <style lang="less" scoped>
+
 .content-wrap{
     .content-left{
         padding:20px;
