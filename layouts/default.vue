@@ -60,12 +60,13 @@ html {
 .ivu-layout{
      background: transparent !important; 
 }
-.blog{
+.blog,.read{
     background:@bg-img2  !important; 
     background-size:cover !important;
     background-repeat:no-repeat !important;
     background-attachment:fixed !important;
 }
+
 </style>
 <script type="text/javascript">
 import axios from 'axios'

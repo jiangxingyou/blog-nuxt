@@ -5,7 +5,7 @@
                 <!-- <Banner></Banner> -->
                  <Row   type="flex" justify="center" >
                     <Col  :xs="24" :sm="24" :md="14" :lg="14" class="content-left">
-                        <Item v-for="(li,i) in list" :key="i" bType="文章" :bTitle="li.title" :bTime="li.date　|　dateStr" :bScan="li.scan" :bAbstract="li.overview"/> 
+                        <Item v-for="(li,i) in list" :key="i" bType="文章" :bTitle="li.title" :bTime="li.date　|　dateStr" :bScan="li.scan" :bAbstract="li.overview" :bId="li.id"/> 
                     </Col>
                     <Col  :xs="0" :sm="0" :md="10" :lg="5" class="content-right">
                         <Person/>

@@ -4,7 +4,9 @@
             {{bType}}····     
         </div>
         <div class="item-inner">
-            <div class="item-title">{{bTitle}}</div>
+            <div class="item-title">
+                <nuxt-link :to="{name:'read',params:{id:3306}}">{{bTitle}}</nuxt-link>
+            </div>
             <div class="item-info">
                 <span class="item-info-time">
                     <Icon type="ios-clipboard-outline" />
@@ -21,7 +23,10 @@
             </div>
             <div class="item-abstract">{{bAbstract}}</div>
         </div>
-        <div class="item-read">阅读全文</div>
+        <div class="item-read">
+            <nuxt-link :to="{name:'read',params:{id:bId}}">阅读全文</nuxt-link>
+            
+        </div>
     </div>
 </template>
 <script>
@@ -31,7 +36,8 @@
            bTitle:String,   //标题
            bTime:String,    //时间
            bScan:Number,   //浏览数
-           bAbstract:String //内容概要
+           bAbstract:String, //内容概要
+           bId:Number
         }
     }
 </script>
@@ -55,14 +61,17 @@
             margin: auto 12px;
         }
         &-title{
-            font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+            a{
+                font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
                 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            display: block;
-            font-weight: 300;
-            font-size: 36px;
-            color: #35495e;
-            letter-spacing: 1px;
-            text-align: center;
+                display: block;
+                font-weight: 300;
+                font-size: 36px;
+                color: #35495e;
+                letter-spacing: 1px;
+                text-align: center;
+            }
+            
         }
         &-info{
             margin-top: 10px;
@@ -118,6 +127,13 @@
             text-align: center;
             height: 40px;
             line-height: 40px;  
+            a{
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                color: #fff;
+                font-size: 16px;
+            }
 
         }
         &-read:hover{
