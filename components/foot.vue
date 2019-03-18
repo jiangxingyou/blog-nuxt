@@ -2,23 +2,29 @@
     <div class="foot">
         <div class="foot-content">
             <div class="foot-copyright">
-                <span>@ 2017 - 2019</span>
+                <span>@ 2019 - 2022</span>
                 <span>庞永胜-pangys</span>
-                <span>Powered By Pangys</span>
+                <span>Powered By pangyongsheng</span>
             </div>
             <div class="foot-count">
-                <span>Unique Visitor:  13646</span>
-                <span> Page View:  30880</span>
+                <span class="foot-count-a">Unique Visitor: 
+                    <span style="color:red">{{visit}}</span>
+                </span>
+                <span class="foot-count-b">Unique Visitor:
+                    <span style="color:blank">1</span>
+                </span>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-
     export default {
-    	
-    	
+    	computed:{
+            visit(){
+                return this.$store.state.visitCount;
+            }
+        }
     }
 </script>
 
@@ -36,6 +42,11 @@
             margin: 0 auto;
             text-align: left;
             width: 70%;
+        }
+        &-count{
+            &-a{
+                
+            }
         }
 
 

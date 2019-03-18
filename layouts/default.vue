@@ -68,12 +68,28 @@ html {
 }
 </style>
 <script type="text/javascript">
+import axios from 'axios'
 import Nav from '~/components/nav.vue'
 import Foot from '~/components/foot.vue'
 export default {
     components: {
         Nav,
         Foot
+    },
+    methods:{
+        async setVisitAdd(next){//设置访问数加一
+            let addV =await axios.get(this.$store.state.baseUrl+'api/visitAdd');
+            //console.log(addV);
+        },
+        async getVisit(next){//获取访问数
+            let data =await axios.get(this.$store.state.baseUrl+'api/visitCount');
+            this.$store.state.visitCount = data.data.site[0].count;
+        }
+
+    },
+    mounted(){
+        this.getVisit();
+        this.setVisitAdd();    
     }
 }
 

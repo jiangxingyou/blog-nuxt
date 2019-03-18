@@ -1,7 +1,7 @@
 <template>
     <Row style="height: 100%;overflow: hidden;">
-        <Col :xs="0" :sm="2" :md="3" :lg="3">s</Col>
-        <Col :xs="20" :sm="22" :md="21" :lg="21">
+        <Col :xs="0" :sm="1" :md="3" :lg="3">s</Col>
+        <Col :xs="24" :sm="23" :md="21" :lg="21">
             <Menu mode="horizontal" theme="dark" active-name="1">
             <div class="layout-logo"></div>
             <div class="layout-nav">

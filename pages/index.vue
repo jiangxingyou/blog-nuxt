@@ -43,14 +43,14 @@ export default {
             return value.match(/\d{4}\-\d{2}\-\d{2}/)[0];
         }
     },
+    methods:{
+        async getArticleList(){//获取文章列表
+            let data =await axios.get(this.$store.state.baseUrl+'api/article');
+            this.list=data.data.articles;
+        }
+    },
     created(){
-        let data = axios.get('http://localhost:3000/api/article');
-        data.then((a)=>{
-            // console.log(a);
-            // console.log(typeof a.data.articles[0].date)
-            this.list=a.data.articles
-        })
-
+        this.getArticleList();
     }
 }
 

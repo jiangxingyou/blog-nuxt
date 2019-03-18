@@ -49,18 +49,18 @@ export default {
        
     },
     methods:{
-        rearrange(){
-            this.tagList.sort(function(a,b){    //重新随机排序
+        rearrange(){//重新随机排序
+            this.tagList.sort(function(a,b){    
                 return Math.random()>.5 ? -1 : 1; 
             })
-        }
+        },
+        async getTags(next){//获取tag列表
+            let data  = await axios.get(this.$store.state.baseUrl+'api/tags');
+            this.tagList = data.data.tags;
+        },
     },
     created(){
-        let data  = axios.get('http://localhost:3000/api/tags')
-        data.then((b)=>{
-            this.tagList = b.data.tags;
-         })
-
+        this.getTags();
     }
 }
 
