@@ -45,8 +45,13 @@ export default {
     },
     methods:{
         async getArticleList(){//获取文章列表
-            let data =await axios.get(this.$store.state.baseUrl+'api/article');
-            this.list=data.data.articles;
+            try{
+                let data =await axios.get(this.$store.state.baseUrl+'api/article');
+                this.list=data.data.articles;
+            }catch(err){
+                console.log(err)
+            }
+            
         }
     },
     created(){

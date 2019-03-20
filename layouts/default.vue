@@ -60,7 +60,7 @@ html {
 .ivu-layout{
      background: transparent !important; 
 }
-.blog,.read{
+.blog,.read,.type,.message,.time,.tag{
     background:@bg-img2  !important; 
     background-size:cover !important;
     background-repeat:no-repeat !important;
@@ -79,7 +79,10 @@ export default {
     },
     methods:{
         async setVisitAdd(next){//设置访问数加一
-            let addV =await axios.get(this.$store.state.baseUrl+'api/visitAdd');
+            if(!this.$store.state.isDev){
+                let addV =await axios.get(this.$store.state.baseUrl+'api/visitAdd');
+            }
+            
             //console.log(addV);
         },
         async getVisit(next){//获取访问数

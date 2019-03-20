@@ -1,5 +1,5 @@
 <template>
-     <Row class="wrap">
+     <Row class="wrap message">
         <Col span="18">
             
         </Col>

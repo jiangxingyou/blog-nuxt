@@ -1,14 +1,33 @@
+@import "./var.less";
+
+//页面切换样式
 .page-enter-active, .page-leave-active {
   transition: opacity 0.3s;
 }
 .page-enter, .page-leave-active {
   opacity: 0;
 }
-
+#__layout{//重写navbar
+	.ivu-layout-header{
+		height: @nav-height;
+		line-height: @nav-height;
+		background: @nav-color;
+	}
+	.ivu-menu-horizontal {
+	    height: @nav-height;
+	    line-height: @nav-height;
+	}
+	.ivu-menu-light {
+    	background: transparent;
+	}
+	.ivu-menu-horizontal.ivu-menu-light:after{
+		display: none;
+	}
+}
 /* 重写timeline组件样式 */
 .time{
  	.ivu-timeline-item-tail{
-	    border-left: 5px solid #515a6e;
+	    border-left: 5px solid @theme-color;
 	    left: 6px;
 	}
 	.ivu-timeline-item-head {
@@ -16,7 +35,7 @@
 	    height: 16px;
 	    background-color: #f8f8f9;
 	    border-radius: 50%;
-	    border: 3px solid #2d8cf0;
+	    border: 3px solid @theme-color;
 	}
 }      
 

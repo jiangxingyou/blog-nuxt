@@ -38,10 +38,14 @@ export default {
     },
     methods:{
         async getHtml(){
-            let data =await axios.get(this.$store.state.baseUrl+'api/articleHtml'+this.$route.params.id);
-            console.log(data);
-            this.title= data.data.articles[0].title;
+            try{
+                let data =await axios.get(this.$store.state.baseUrl+'api/articleHtml'+this.$route.params.id);
+                //console.log(data);
+                this.title= data.data.articles[0].title;
             this.innerH= data.data.articles[0].text;
+            }catch(err){
+                console.log(err)
+            }
         }
     },
     created(){

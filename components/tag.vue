@@ -1,5 +1,5 @@
 <template>
-   <a class="tag" :style="{color:setColor,fontSize:normalSize}">
+   <a class="tags" :style="{color:setColor,fontSize:normalSize}">
         {{tname}}
    </a>
 </template>
@@ -29,7 +29,7 @@
                 return $RandomColor();
     		},
             normalSize(){
-                return $Normal(24,6)+"px"
+                return $Normal(18,6)+"px"
             }
     	},
         created(){
@@ -40,7 +40,7 @@
 </script>
 
 <style lang="less" scoped>
-	.tag{
+	.tags{
         font-size: 24px;
         margin:5px;
         display: inline-block;

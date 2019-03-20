@@ -30,13 +30,13 @@
 
 <style lang="less" scoped>
 	.foot{
-        padding: 10px 0;
-        background: #f5f5f5;
-        color: #666;
-        font-size: 14px;
+        padding: 15px 0;
+        background: #3a3b3c;
+        color: #fff;
+        font-size: 12px;
         width: 100%;
         position: relative;
-        margin:0;
+        margin: 0;
 
         &-content{
             margin: 0 auto;

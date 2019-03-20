@@ -10,12 +10,12 @@
             <div class="item-info">
                 <span class="item-info-time">
                     <Icon type="ios-clipboard-outline" />
-                    发表于{{bTime}}
+                    {{bTime}}
                 </span>
-                <!-- <span class="item-info-word">
+                <span class="item-info-word">
                     <Icon type="ios-create-outline" />
-                    字数300
-                </span>  --> 
+                    评论0
+                </span>  
                 <span class="item-info-scan">
                     <Icon type="ios-eye-outline" />
                     阅读{{bScan}}
@@ -51,7 +51,7 @@
         margin:auto;
         margin-bottom: 20px;
         position: relative;
-        padding: 40px 20px;
+        padding: 20px 20px;
 
         background: linear-gradient(-150deg, transparent 1.5em, #fff 0);    
         position: relative;
@@ -66,7 +66,7 @@
                 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
                 display: block;
                 font-weight: 300;
-                font-size: 36px;
+                font-size: 26px;
                 color: #35495e;
                 letter-spacing: 1px;
                 text-align: center;
@@ -76,12 +76,12 @@
         &-info{
             margin-top: 10px;
             margin-bottom: 20px;
-            color: #555;
+            color: #00a7e0;
             font-family: "PingFang SC","Microsoft YaHei",Lato,sans-serif;
             font-size: 14px;
             text-align: center;
             i{
-                font-size: 20px;
+                font-size: 14px;
             }
             &-time{
                 color: #00a7e0;
@@ -97,22 +97,23 @@
             position: absolute;
             left: -8px;
             top: 20px;
-            border-color: #f5f7f9;
+            /* border-color: #3a3b3c; */
             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px #f5f7f9, 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-            background-color: #f5f7f9;
+            background-color: #757678;
             margin: 5px 0 15px 2px;
-            font-size: 17px;
+            font-size: 14px;
             border-radius: 0 4px 4px 0;
             display: inline-block;
             padding: 6px 9px 3px 17px;
             line-height: 1;
+            color: #fff;
         }
         &-abstract{
             text-align: justify;
-            font-size: 22px;
+            font-size: 16px;
         }
         &-read{
-            background: #97dffd;
+            background: #66cccc;
             color: #fff;
             font-size: 17px;
             padding: 1px 15px;
@@ -145,7 +146,7 @@
             position: absolute;
             top: 0;
             right: 0;
-            background: linear-gradient(to left bottom, transparent 50%, rgb(151, 223, 253) 0, rgb(151, 223, 253)) 100% 0 no-repeat;
+            background: linear-gradient(to left bottom, transparent 50%, #66cccc 0,  #66cccc) 100% 0 no-repeat;
             width: 1.73em;
             height: 3em;
             -webkit-transform: translateY(-1.3em) rotate(-30deg);

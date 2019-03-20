@@ -1,8 +1,8 @@
 <template>
     <Row style="height: 100%;overflow: hidden;">
-        <Col :xs="0" :sm="1" :md="3" :lg="3">s</Col>
+        <Col :xs="0" :sm="1" :md="3" :lg="3"> &nbsp;</Col>
         <Col :xs="24" :sm="23" :md="21" :lg="21">
-            <Menu mode="horizontal" theme="dark" active-name="1">
+            <Menu mode="horizontal"  active-name="1">
             <div class="layout-logo"></div>
             <div class="layout-nav">
                 <MenuItem name="1">
@@ -49,7 +49,7 @@
         display: flex;
     }
     .ivu-menu-item{
-        font-size: 20px;
+        font-size: 16px;
         a{
             display: inline-block;
             width: 100%;

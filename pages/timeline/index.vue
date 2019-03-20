@@ -64,12 +64,15 @@ export default {
             width: 70%;
             margin: 50px auto;
             min-height: 800px;
+            background:#fff;
             
        }
        &-content{
+            padding:10px 30px; 
             &-title{
                 font-size: 22px;
                 margin:20px;
+
             }
             .line{
                 margin:30px auto;
