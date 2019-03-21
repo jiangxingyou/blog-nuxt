@@ -57,6 +57,7 @@ export default {
             try{
                 let data  = await axios.get(this.$store.state.baseUrl+'api/tags');
                 this.tagList = data.data.tags;
+                console.log(this.tagList);
             }catch(err){
                 console.log(err)
             }

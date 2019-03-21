@@ -25,6 +25,7 @@
     
 </template>
 <script>
+import axios from 'axios'
 export default {
     head() {
         return {
@@ -40,16 +41,37 @@ export default {
     data(){
         return{
             list:[
-                {time:"2018"},
-                {time:"12-25",des:"S常用设计模式总结"},
-                {time:"12-25",des:"如何形成一个完整的HTML对象"},
-                {time:"12-25",des:"聊聊伪元素（::after和::before）、pointer-events属性、touch-action属性"},
-                {time:"12-25",des:"HTTP知识（前端相关）"},
-                {time:"12-25",des:"HTTP知识（前端相关）"},
-                {time:"2018"},
-                {time:"12-25",des:"CSS技巧"},
+               
             ]
         }
+    },
+    methods:{
+        async getLists(){//articleTime
+            console.log(123213);
+            try{
+                console.log(2222)
+                let data =await axios.get(this.$store.state.baseUrl+'api/articleTime');
+                let year=0;
+                data.data.articles.map((v)=>{
+                    let t = new Date(v.date);
+                    if( year!=t.getFullYear() ) {
+                        year = t.getFullYear();
+                       this.list.push({ time : t.getFullYear()})
+                    }
+                    this.list.push({
+                        time:t.getMonth()+"-"+t.getDate(),
+                        des:v.title
+                    })
+                    
+                })
+                //this.list=data.data.articles;
+            }catch(e){
+                console.log(err);
+            }
+        }
+    },
+    created(){
+        this.getLists();
     }
 }
 </script>
@@ -63,7 +85,7 @@ export default {
         &-wrap{
             width: 70%;
             margin: 50px auto;
-            min-height: 800px;
+            min-height: 500px;
             background:#fff;
             
        }

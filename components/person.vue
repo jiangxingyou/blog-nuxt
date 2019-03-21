@@ -56,12 +56,12 @@
                 <div class="person-state">
                     <div class="person-state-item">
                         <a >
-                            <span>日志-54</span>
+                            <span>日志-4</span>
                         </a>
                     </div>
                    <div class="person-state-item">
                         <a  >
-                            <span>分类-6</span>
+                            <span>分类-3</span>
                         </a>
                     </div>
                 </div>

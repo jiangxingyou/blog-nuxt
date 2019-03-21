@@ -33,9 +33,8 @@ export default {
     data(){
         return{
             lists:[
-                {name:"日记",total:'3'},
-                {name:"日记",total:'3'},
-                {name:"web",total:'13'},
+                {name:"日记",total:'2'},
+                {name:"web",total:'1'},
                 {name:"node",total:'1'}
             ]
         }
@@ -49,15 +48,15 @@ export default {
         flex: auto;
         background: #e8edf1;
         &-wrap{
-            width: 80%;
+            padding: 50px 150px;
             margin: 50px auto;
-            min-height: 600px;
-            background-color: #fff;
-            background: #58a;
-            background: radial-gradient(circle at top left, transparent 15px, #fff 0) top left,
-                        radial-gradient(circle at top right, transparent 15px, #fff 0) top right,
-                        radial-gradient(circle at bottom left, transparent 15px, #fff 0) bottom left,
-                        radial-gradient(circle at bottom right, transparent 15px, #fff 0) bottom right;
+            
+           
+            
+            background: radial-gradient(circle at top left, transparent 15px, #757678 0) top left,
+                        radial-gradient(circle at top right, transparent 15px, #757678 0) top right,
+                        radial-gradient(circle at bottom left, transparent 15px, #757678 0) bottom left,
+                        radial-gradient(circle at bottom right, transparent 15px, #757678 0) bottom right;
             background-size: 51% 51%; 
             
             background-repeat: no-repeat;
@@ -69,15 +68,18 @@ export default {
                 line-height: 50px;
                 margin: 60px auto;
                 text-align: center;
+                    color: #fff;
             }
             &-des{
                 text-align: center;
                 margin:30px auto;
                 font-size: 18px;
+                    color: #fff;
             }
             ul{
                 padding:20px;
-                padding-left: 80px;
+                    color: #fff;
+               
                 li{
                     font-size: 23px;        
                 }

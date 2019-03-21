@@ -34,5 +34,13 @@ const $RandomColor = function(){
      var b=Math.floor(Math.random()*256);
      return "rgb("+r+','+g+','+b+")";
 }
+//随机颜色hsl
+const $RandomColor2 = function() {
+    return "hsl(" + 
+    	Math.round(Math.random() * 360) + "," + 
+    	Math.round(Math.random() * 100) + '%,' + 
+    	Math.round(Math.random() * 100) + '%)';
+}
+
 
 export{colorArr,$RandomColor};

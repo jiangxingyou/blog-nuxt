@@ -1,7 +1,7 @@
 <template>
      <Row class="wrap message">
         <Col span="18">
-            
+            <Msg/>
         </Col>
         <Col span="6">
             
@@ -9,11 +9,11 @@
     </Row>
 </template>
 <script>
-import Logo from '~/components/Logo.vue'
+import Msg from '~/components/messageBoard.vue'
 
 export default {
     components: {
-
+		Msg	
     }
 }
 
