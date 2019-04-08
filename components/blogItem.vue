@@ -5,7 +5,7 @@
         </div>
         <div class="item-inner">
             <div class="item-title">
-                <nuxt-link :to="{name:'read',params:{id:3306}}">{{bTitle}}</nuxt-link>
+                <nuxt-link :to="{name:'read',params:{id:bId}}">{{bTitle}}</nuxt-link>
             </div>
             <div class="item-info">
                 <span class="item-info-time">

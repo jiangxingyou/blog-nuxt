@@ -39,8 +39,8 @@ const $RandomColor2 = function() {
     return "hsl(" + 
     	Math.round(Math.random() * 360) + "," + 
     	Math.round(Math.random() * 100) + '%,' + 
-    	Math.round(Math.random() * 100) + '%)';
+    	Math.round(Math.random() * 80) + '%)';
 }
 
 
-export{colorArr,$RandomColor};
+export{colorArr,$RandomColor,$RandomColor2};
